@@ -11,3 +11,18 @@ done
 EOF
 zwc@ZwcLinux:~$ chmod +x q05/worker.sh
 zwc@ZwcLinux:~$ cd q05
+zwc@ZwcLinux:~/q05$ ./worker.sh > stdout.log 2> stderr.log
+^Z
+[1]+  Stopped                 ./worker.sh > stdout.log 2> stderr.log
+zwc@ZwcLinux:~/q05$ bg
+[1]+ ./worker.sh > stdout.log 2> stderr.log &
+zwc@ZwcLinux:~/q05$ jobs
+[1]+  Running                 ./worker.sh > stdout.log 2> stderr.log &
+zwc@ZwcLinux:~/q05$ PID=$(jobs -p)
+zwc@ZwcLinux:~/q05$ kill "$PID"
+zwc@ZwcLinux:~/q05$ wait "$PID"
+[1]+  Done                    ./worker.sh > stdout.log 2> stderr.log
+zwc@ZwcLinux:~/q05$ cat cleanup.log
+CLEAN_EXIT
+zwc@ZwcLinux:~/q05$ jobs
+zwc@ZwcLinux:~/q05$ 
