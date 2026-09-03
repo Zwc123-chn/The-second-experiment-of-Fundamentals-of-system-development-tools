@@ -1,0 +1,49 @@
+zwc@ZwcLinux:~/q06$ pwd
+/home/zwc/q06
+zwc@ZwcLinux:~/q06$ ruff check .
+I001 [*] Import block is un-sorted or un-formatted
+ --> app.py:1:1
+  |
+1 | / import os
+2 | | from math_utils import calculate_total
+  | |______________________________________^
+3 |
+4 |   print(calculate_total(12.5, 4))
+  |
+help: Organize imports
+  |
+1 | import os
+2 +
+3 | from math_utils import calculate_total
+  |
+
+F401 [*] `os` imported but unused
+ --> app.py:1:8
+  |
+1 | import os
+  |        ^^
+2 | from math_utils import calculate_total
+  |
+help: Remove unused import: `os`
+  |
+  - import os
+1 | from math_utils import calculate_total
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> test_math_utils.py:1:1
+  |
+1 | from math_utils import calculate_total
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 |
+3 | def test_total_price():
+  |
+help: Organize imports
+  |
+2 |
+3 +
+4 | def test_total_price():
+  |
+
+Found 3 errors.
+[*] 3 fixable with the `--fix` option.
