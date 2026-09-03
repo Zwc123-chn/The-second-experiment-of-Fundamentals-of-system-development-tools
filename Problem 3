@@ -158,4 +158,46 @@ zwc@ZwcLinux:~/q07$ python3 merge_sort.py
 1
 (Pdb) p right[j]
 *** IndexError: list index out of range
-(Pdb) 
+(Pdb) q
+Traceback (most recent call last):
+  File "/home/zwc/q07/merge_sort.py", line 20, in <module>
+    print(merge_sort([3, 1, 4, 1, 5, 9, 2, 6]))
+  File "/home/zwc/q07/merge_sort.py", line 18, in merge_sort
+    return merge(merge_sort(a[:m]), merge_sort(a[m:]))
+  File "/home/zwc/q07/merge_sort.py", line 18, in merge_sort
+    return merge(merge_sort(a[:m]), merge_sort(a[m:]))
+  File "/home/zwc/q07/merge_sort.py", line 18, in merge_sort
+    return merge(merge_sort(a[:m]), merge_sort(a[m:]))
+  File "/home/zwc/q07/merge_sort.py", line 7, in merge
+    while i < len(left) and j < len(right):
+  File "/home/zwc/q07/merge_sort.py", line 7, in merge
+    while i < len(left) and j < len(right):
+  File "/usr/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+zwc@ZwcLinux:~/q07$ cat > merge_sort.py << 'EOF'
+def merge(left, right):
+    result = []
+    i=j=0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i]); i += 1
+        else:
+            # 修复: right[i] → right[j]
+            result.append(right[j]); j += 1
+    return result + left[i:] + right[j:]
+
+def merge_sort(a):
+    if len(a) <= 1:
+        return a
+    m = len(a) // 2
+    return merge(merge_sort(a[:m]), merge_sort(a[m:]))
+
+if __name__ == "__main__":
+    print(merge_sort([3, 1, 4, 1, 5, 9, 2, 6]))
+EOF
+zwc@ZwcLinux:~/q07$ python3 merge_sort.py
+[1, 1, 2, 3, 4, 5, 6, 9]
+zwc@ZwcLinux:~/q07$ 
