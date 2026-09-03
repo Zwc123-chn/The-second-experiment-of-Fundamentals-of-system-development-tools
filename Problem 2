@@ -1,3 +1,19 @@
+mkdir -p q06
+cd ~/q06
+cat > math\_utils.py <<'EOF'
+def total\_price(price: float, count: int) -> float:
+    return price * count
+EOF
+cat > app.py <<'EOF'
+from math\_utils import total_price
+print(total\_price(12.5, 4))
+EOF
+cat > test\_math\_utils.py <<'EOF'
+from math\_utils import total\_pricedef test\_total\_price():
+    assert total\_price(12.5, 4) == 50.0
+EOF
+source sdt-env/bin/activate
+code .
 zwc@ZwcLinux:~/q06$ pwd
 /home/zwc/q06
 zwc@ZwcLinux:~/q06$ ruff check .
