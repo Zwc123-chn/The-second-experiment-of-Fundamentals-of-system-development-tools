@@ -200,4 +200,114 @@ if __name__ == "__main__":
 EOF
 zwc@ZwcLinux:~/q07$ python3 merge_sort.py
 [1, 1, 2, 3, 4, 5, 6, 9]
+zwc@ZwcLinux:~/q07$ cat > test_merge_sort.py << 'EOF'
+from merge_sort import merge_sort
+
+def test_given_input():
+    assert merge_sort([3, 1, 4, 1, 5, 9, 2, 6]) == [1, 1, 2, 3, 4, 5, 6, 9]
+
+def test_duplicate_elements():
+    assert merge_sort([5, 2, 2, 8, 5, 1, 1]) == [1, 1, 2, 2, 5, 5, 8]
+EOF
+zwc@ZwcLinux:~/q07$ pytest test_merge_sort.py -v
+Command 'pytest' not found, did you mean:
+  command 'yptest' from deb yp-tools (4.2.3-3)
+  command 'ptest' from deb pbuilder-scripts (22)
+  command 'ptest' from deb parmetis-test (4.0.3-5build1)
+Try: sudo apt install <deb name>
+zwc@ZwcLinux:~/q07$ pip3 install pytest
+Command 'pip3' not found, but can be installed with:
+sudo apt install python3-pip
+zwc@ZwcLinux:~/q07$ sudo apt install python3-pytest
+[sudo] password for zwc: 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树... 完成
+正在读取状态信息... 完成                 
+下列软件包是自动安装的并且现在不需要了：
+  asymptote asymptote-doc cm-super cm-super-minimal context context-modules
+  feynmf fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius
+  fonts-adf-universalis fonts-cabin fonts-cantarell fonts-comfortaa
+  fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra fonts-font-awesome
+  fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic
+  fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis
+  fonts-gfs-neohellenic fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos
+  fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode
+  fonts-linuxlibertine fonts-lobster fonts-lobstertwo fonts-noto-core
+  fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis
+  fonts-sil-gentium fonts-sil-gentium-basic fonts-sil-gentiumplus
+  fonts-sil-gentiumplus-compact freeglut3 libglew2.2 libgsl27 libgslcblas0
+  libsigsegv2 pfb2t1c2pfb texlive-metapost
+使用'sudo apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  python3-attr python3-iniconfig python3-packaging python3-pluggy python3-py
+  python3-pygments python3-toml
+建议安装：
+  python-attr-doc subversion python-pygments-doc ttf-bitstream-vera
+下列【新】软件包将被安装：
+  python3-attr python3-iniconfig python3-packaging python3-pluggy python3-py
+  python3-pygments python3-pytest python3-toml
+升级了 0 个软件包，新安装了 8 个软件包，要卸载 0 个软件包，有 80 个软件包未被升级。
+需要下载 1,152 kB 的归档。
+解压缩后会消耗 6,107 kB 的额外空间。
+您希望继续执行吗？ [Y/n] Y
+获取:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy-updates/main amd64 python3-attr all 21.2.0-1ubuntu1 [43.9 kB]
+获取:2 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/universe amd64 python3-iniconfig all 1.1.1-2 [6,024 B]
+获取:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/main amd64 python3-packaging all 21.3-1 [30.7 kB]
+获取:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/universe amd64 python3-pluggy all 0.13.0-7.1 [19.0 kB]
+获取:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/universe amd64 python3-py all 1.10.0-1 [71.9 kB]
+获取:6 http://cn.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-pygments all 2.11.2+dfsg-2ubuntu0.1 [750 kB]
+获取:7 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/universe amd64 python3-toml all 0.10.2-1 [16.5 kB]
+获取:8 http://mirrors.tuna.tsinghua.edu.cn/ubuntu jammy/universe amd64 python3-pytest all 6.2.5-1ubuntu2 [214 kB]
+已下载 1,152 kB，耗时 2秒 (533 kB/s)
+正在选中未选择的软件包 python3-attr。
+(正在读取数据库 ... 系统当前共安装有 296777 个文件和目录。)
+准备解压 .../0-python3-attr_21.2.0-1ubuntu1_all.deb  ...
+正在解压 python3-attr (21.2.0-1ubuntu1) ...
+正在选中未选择的软件包 python3-iniconfig。
+准备解压 .../1-python3-iniconfig_1.1.1-2_all.deb  ...
+正在解压 python3-iniconfig (1.1.1-2) ...
+正在选中未选择的软件包 python3-packaging。
+准备解压 .../2-python3-packaging_21.3-1_all.deb  ...
+正在解压 python3-packaging (21.3-1) ...
+正在选中未选择的软件包 python3-pluggy。
+准备解压 .../3-python3-pluggy_0.13.0-7.1_all.deb  ...
+正在解压 python3-pluggy (0.13.0-7.1) ...
+正在选中未选择的软件包 python3-py。
+准备解压 .../4-python3-py_1.10.0-1_all.deb  ...
+正在解压 python3-py (1.10.0-1) ...
+正在选中未选择的软件包 python3-pygments。
+准备解压 .../5-python3-pygments_2.11.2+dfsg-2ubuntu0.1_all.deb  ...
+正在解压 python3-pygments (2.11.2+dfsg-2ubuntu0.1) ...
+正在选中未选择的软件包 python3-toml。
+准备解压 .../6-python3-toml_0.10.2-1_all.deb  ...
+正在解压 python3-toml (0.10.2-1) ...
+正在选中未选择的软件包 python3-pytest。
+准备解压 .../7-python3-pytest_6.2.5-1ubuntu2_all.deb  ...
+正在解压 python3-pytest (6.2.5-1ubuntu2) ...
+正在设置 python3-iniconfig (1.1.1-2) ...
+正在设置 python3-attr (21.2.0-1ubuntu1) ...
+正在设置 python3-py (1.10.0-1) ...
+正在设置 python3-pygments (2.11.2+dfsg-2ubuntu0.1) ...
+正在设置 python3-packaging (21.3-1) ...
+正在设置 python3-toml (0.10.2-1) ...
+正在设置 python3-pluggy (0.13.0-7.1) ...
+正在设置 python3-pytest (6.2.5-1ubuntu2) ...
+正在处理用于 man-db (2.10.2-1) 的触发器 ...
+zwc@ZwcLinux:~/q07$ pytest test_merge_sort.py -v
+Command 'pytest' not found, did you mean:
+  command 'ptest' from deb pbuilder-scripts (22)
+  command 'ptest' from deb parmetis-test (4.0.3-5build1)
+  command 'yptest' from deb yp-tools (4.2.3-3)
+Try: sudo apt install <deb name>
+zwc@ZwcLinux:~/q07$ python3 -m pytest test_merge_sort.py -v
+============================== test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/zwc/q07
+collected 2 items                                                               
+
+test_merge_sort.py::test_given_input PASSED                               [ 50%]
+test_merge_sort.py::test_duplicate_elements PASSED                        [100%]
+
+=============================== 2 passed in 0.01s ===============================
 zwc@ZwcLinux:~/q07$ 
