@@ -47,3 +47,18 @@ help: Organize imports
 
 Found 3 errors.
 [*] 3 fixable with the `--fix` option.
+zwc@ZwcLinux:~/q06$ ruff check . --fix
+Found 2 errors (2 fixed, 0 remaining).
+zwc@ZwcLinux:~/q06$ ruff check .
+All checks passed!
+zwc@ZwcLinux:~/q06$ pytest test_math_utils.py -v
+======================================== test session starts ========================================
+platform linux -- Python 3.10.12, pytest-9.1.1, pluggy-1.6.0 -- /home/zwc/sdt-env/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/zwc/q06
+collected 1 item                                                                                    
+
+test_math_utils.py::test_total_price PASSED                                                   [100%]
+
+========================================= 1 passed in 0.02s =========================================
+zwc@ZwcLinux:~/q06$ 
