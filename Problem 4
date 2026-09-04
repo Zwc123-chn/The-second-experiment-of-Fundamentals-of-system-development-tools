@@ -1,0 +1,35 @@
+zwc@ZwcLinux:~$ mkdir -p q08
+zwc@ZwcLinux:~$ cd q08
+zwc@ZwcLinux:~/q08$ pwd
+/home/zwc/q08
+zwc@ZwcLinux:~/q08$ cat > generate_words.py << 'EOF'
+import random
+random.seed(20260831)
+vocab = [f"w{i}" for i in range(1000)]
+with open("words.txt", "w", encoding="utf-8") as f:
+    f.write(" ".join(random.choice(vocab) for _ in range(30000)))
+EOF
+zwc@ZwcLinux:~/q08$ python3 generate_words.py
+zwc@ZwcLinux:~/q08$ ls
+generate_words.py  words.txt
+zwc@ZwcLinux:~/q08$ cat > wordfreq.py << 'EOF'
+words = open("words.txt", encoding="utf-8").read().split()
+unique = []
+for word in words:
+    if word not in unique:
+        unique.append(word)
+print("count=", len(unique))
+EOF
+zwc@ZwcLinux:~/q08$ time python3 wordfreq.py
+count= 1000
+
+real	0m0.124s
+user	0m0.087s
+sys	0m0.022s
+zwc@ZwcLinux:~/q08$ time python3 wordfreq.py
+count= 1000
+
+real	0m0.121s
+user	0m0.083s
+sys	0m0.026s
+zwc@ZwcLinux:~/q08$ 
