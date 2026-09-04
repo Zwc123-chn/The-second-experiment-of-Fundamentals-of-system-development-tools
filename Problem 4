@@ -32,4 +32,43 @@ count= 1000
 real	0m0.121s
 user	0m0.083s
 sys	0m0.026s
+zwc@ZwcLinux:~/q08$ python3 -m cProfile -s cumulative wordfreq.py
+count= 1000
+         1012 function calls in 0.131 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.131    0.131 {built-in method builtins.exec}
+        1    0.124    0.124    0.131    0.131 wordfreq.py:1(<module>)
+        1    0.006    0.006    0.006    0.006 {method 'split' of 'str' objects}
+        1    0.001    0.001    0.001    0.001 {method 'read' of '_io.TextIOWrapper' objects}
+        1    0.000    0.000    0.000    0.000 codecs.py:319(decode)
+        1    0.000    0.000    0.000    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+     1000    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method io.open}
+        1    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+
+
+zwc@ZwcLinux:~/q08$ cat > wordfreq_opt.py << 'EOF'
+words = open("words.txt", encoding="utf-8").read().split()
+unique_set = set(words)
+print("count=", len(unique_set))
+EOF
+zwc@ZwcLinux:~/q08$ time python3 wordfreq_opt.py
+count= 1000
+
+real	0m0.033s
+user	0m0.018s
+sys	0m0.003s
+zwc@ZwcLinux:~/q08$ time python3 wordfreq_opt.py
+count= 1000
+
+real	0m0.033s
+user	0m0.009s
+sys	0m0.007s
 zwc@ZwcLinux:~/q08$ 
