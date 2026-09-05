@@ -46,3 +46,5 @@ drwxrwxr-x 5 zwc zwc  4096  9月  2 15:11 sdt-env
 drwx------ 5 zwc zwc  4096  8月 29 17:44 snap
 drwxr-xr-x 2 zwc zwc  4096  8月 24 20:25 Templates
 drwxr-xr-x 2 zwc zwc  4096  8月 24 20:25 Videos
+zwc@ZwcLinux:~$ cat file_list.txt | grep bash
+zwc@ZwcLinux:~$ cat file_list.txt | grep bash >> bash_files.txt
