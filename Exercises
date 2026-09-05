@@ -48,3 +48,42 @@ drwxr-xr-x 2 zwc zwc  4096  8月 24 20:25 Templates
 drwxr-xr-x 2 zwc zwc  4096  8月 24 20:25 Videos
 zwc@ZwcLinux:~$ cat file_list.txt | grep bash
 zwc@ZwcLinux:~$ cat file_list.txt | grep bash >> bash_files.txt
+
+#练习三------------------------------------------------------------------------------------------------------------------------------------------
+
+zwc@ZwcLinux:~$ alias myls='ls -lh'
+zwc@ZwcLinux:~$ myls
+total 200K
+-rw-rw-r-- 1 zwc zwc    0  9月  5 10:58 bash_files.txt
+-rw-rw-r-- 1 zwc zwc   11  8月 31 16:10 cleanup.log
+drwxr-xr-x 2 zwc zwc 4.0K  8月 26 21:30 Desktop
+drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Documents
+drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Downloads
+-rw-rw-r-- 1 zwc zwc 1.5K  9月  5 10:55 file_list.txt
+-rw-rw-r-- 1 zwc zwc   91  8月 30 14:56 marco.sh
+drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Music
+-rw-rw-r-- 1 zwc zwc  640  9月  2 15:34 packages.microsoft.gpg
+drwxr-xr-x 3 zwc zwc 4.0K  8月 25 13:54 Pictures
+drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Public
+drwxrwxr-x 3 zwc zwc 4.0K  8月 30 20:59 q00
+drwxrwxr-x 3 zwc zwc 4.0K  8月 30 21:04 q00-fresh
+drwxrwxr-x 4 zwc zwc 4.0K  8月 26 12:43 q01
+drwxrwxr-x 2 zwc zwc 4.0K  8月 29 10:27 q02
+drwxrwxr-x 3 zwc zwc 4.0K  8月 29 14:24 q03
+drwxrwxr-x 2 zwc zwc 4.0K  8月 29 17:38 q04
+drwxrwxr-x 2 zwc zwc 4.0K  9月  2 11:00 q05
+drwxrwxr-x 5 zwc zwc 4.0K  9月  3 13:03 q06
+drwxrwxr-x 4 zwc zwc 4.0K  9月  3 16:41 q07
+drwxrwxr-x 2 zwc zwc 4.0K  9月  4 20:35 q08
+-rw-rw-r-- 1 zwc zwc  302  8月 29 17:38 report.aux
+-rw-rw-r-- 1 zwc zwc 4.3K  8月 29 17:38 report.fdb_latexmk
+-rw-rw-r-- 1 zwc zwc 7.7K  8月 29 17:38 report.fls
+-rw-rw-r-- 1 zwc zwc 4.8K  8月 29 17:38 report.log
+-rw-rw-r-- 1 zwc zwc  74K  8月 29 17:38 report.pdf
+drwxrwxr-x 5 zwc zwc 4.0K  9月  2 15:11 sdt-env
+drwx------ 5 zwc zwc 4.0K  8月 29 17:44 snap
+drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Templates
+drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Videos
+新开终端↓--------------------------------------------------------------------------------------------------
+
+
