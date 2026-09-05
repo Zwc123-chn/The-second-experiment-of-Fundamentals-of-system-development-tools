@@ -92,4 +92,9 @@ Command 'myls' not found, did you mean:
   command 'pyls' from deb python3-pyls (0.36.2-3)
 Try: sudo apt install <deb name>
 
+#练习四------------------------------------------------------------------------------------------------------------------------------------------
+
+zwc@ZwcLinux:~$ vim test_vim.txt
+
+
 
