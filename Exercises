@@ -1,0 +1,13 @@
+#练习一------------------------------------------------------------------------------------------------------------------------------------------
+zwc@ZwcLinux:~$ sleep 30
+
+[1]+  Stopped                 sleep 30
+zwc@ZwcLinux:~$ jobs
+[1]+  Stopped                 sleep 30
+zwc@ZwcLinux:~$ bg
+[1]+ sleep 30 &
+[1]+  Done                    sleep 30
+zwc@ZwcLinux:~$ fg
+bash: fg: current: no such job
+zwc@ZwcLinux:~$ ^C
+zwc@ZwcLinux:~$ 
