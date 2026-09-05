@@ -109,3 +109,11 @@ zwc@ZwcLinux:~$ which python3
 /usr/bin/python3
 zwc@ZwcLinux:~$ which git
 /usr/bin/git
+
+#练习七------------------------------------------------------------------------------------------------------------------------------------------
+
+zwc@ZwcLinux:~$ time sleep 2
+
+real	0m2.011s
+user	0m0.004s
+sys	0m0.000s
