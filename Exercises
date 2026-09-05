@@ -85,5 +85,11 @@ drwx------ 5 zwc zwc 4.0K  8月 29 17:44 snap
 drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Templates
 drwxr-xr-x 2 zwc zwc 4.0K  8月 24 20:25 Videos
 新开终端↓--------------------------------------------------------------------------------------------------
+zwc@ZwcLinux:~$ myls
+Command 'myls' not found, did you mean:
+  command 'mmls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'tyls' from deb terminology (1.12.1-1)
+  command 'pyls' from deb python3-pyls (0.36.2-3)
+Try: sudo apt install <deb name>
 
 
