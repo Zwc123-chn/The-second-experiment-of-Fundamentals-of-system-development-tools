@@ -102,3 +102,10 @@ zwc@ZwcLinux:~$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 zwc@ZwcLinux:~$ echo $HOME
 /home/zwc
+
+#练习六------------------------------------------------------------------------------------------------------------------------------------------
+
+zwc@ZwcLinux:~$ which python3
+/usr/bin/python3
+zwc@ZwcLinux:~$ which git
+/usr/bin/git
