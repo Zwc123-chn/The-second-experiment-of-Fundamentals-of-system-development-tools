@@ -96,5 +96,9 @@ Try: sudo apt install <deb name>
 
 zwc@ZwcLinux:~$ vim test_vim.txt
 
+#练习五------------------------------------------------------------------------------------------------------------------------------------------
 
-
+zwc@ZwcLinux:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+zwc@ZwcLinux:~$ echo $HOME
+/home/zwc
